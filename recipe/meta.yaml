@@ -7,18 +7,18 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/olas-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/olas-{{ version }}.tar.gz
   sha256: 0f6740f9adfd10cd51635b508eb626d3e35ec875aa93c2eb80376507b5c2bbae
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.8,<4.0
+    - python {{ python_min }}
     - poetry
   run:
     - cartopy >=0.21.1,<0.22.0
@@ -26,7 +26,7 @@ requirements:
     - matplotlib-base >=3.7.1,<4.0.0
     - netcdf4 >=1.6.3,<2.0.0
     - numpy >=1.24.2,<2.0.0
-    - python >=3.8,<4.0
+    - python >={{ python_min }},<4.0
     - scipy >=1.10.1,<2.0.0
     - xarray >=2023.1.0,<2024.0.0
 
@@ -37,6 +37,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/jorgeperezg/olas
