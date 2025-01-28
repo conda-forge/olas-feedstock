@@ -1,5 +1,5 @@
 {% set name = "olas" %}
-{% set version = "0.3.1" %}
+{% set version = "0.3.2" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/olas-{{ version }}.tar.gz
-  sha256: f7cd2fa10ef2a09b6bd59309dceaca4f78a897af7fec5c9ea3b02d569d2ea126
+  sha256: e0251277845aacb26d911e34d47cc7c5099dce6aecbc514b9973c0e72a695e60
 
 build:
   number: 0
