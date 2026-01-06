@@ -1,5 +1,5 @@
 {% set name = "olas" %}
-{% set version = "0.3.2" %}
+{% set version = "0.4.0" %}
 
 
 package:
@@ -19,7 +19,7 @@ requirements:
   host:
     - pip
     - python {{ python_min }}
-    - hatchling
+    - uv
   run:
     - cartopy >=0.21.1
     - dask >=2023.3.1
