@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/olas-{{ version }}.tar.gz
-  sha256: e0251277845aacb26d911e34d47cc7c5099dce6aecbc514b9973c0e72a695e60
+  sha256: cf41a4779b7f167b3521cae5a8c1e7600028658d619cb98e7b9f723dd49bd210
 
 build:
   number: 0
